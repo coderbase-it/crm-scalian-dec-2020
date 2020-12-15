@@ -1,11 +1,13 @@
 ✔ stylings config scss et variables css @started(20-12-14 15:32) @done(20-12-15 10:00) @lasted(18h28m23s)
 ✔ ui component @done(20-12-15 10:00)
 ✔ lazy loading et routing @done(20-12-15 10:00)
-☐ end ui with directives
+✔ end ui with directives @done(20-12-15 14:38)
+✔ documentation @done(20-12-15 15:37)
+✔ webpack bundle analyzer @done(20-12-15 15:37)
 
 ☐ tp :
   ✔ créer le module PageNotFoundModule (lazy loading) @done(20-12-15 11:50)
   ✔ créer pages/page-not-found-component (declaré sur PageNotFoundModule) @done(20-12-15 11:50)
   ✔ créer le module PageNotFoundRoutingModule (1 route) @done(20-12-15 11:51)
-  ☐ route pour charger PageNotFoundModule sur AppRoutingModule avec loadChildren
-  ☐ bug à corriger
+  ✔ route pour charger PageNotFoundModule sur AppRoutingModule avec loadChildren @done(20-12-15 13:30)
+  ✔ bug à corriger @done(20-12-15 13:30)
