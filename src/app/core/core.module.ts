@@ -4,11 +4,14 @@ import { LoginModule } from '../login/login.module';
 import { UiModule } from '../ui/ui.module';
 import { IconsModule } from '../icons/icons.module';
 import { TextsModule } from '../texts/texts.module';
+import { HeaderComponent } from './components/header/header.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [HeaderComponent, NavComponent, FooterComponent],
   imports: [
     CommonModule
   ],
@@ -16,7 +19,10 @@ import { TextsModule } from '../texts/texts.module';
     LoginModule,
     UiModule,
     IconsModule,
-    TextsModule
+    TextsModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent
   ]
 })
 export class CoreModule { }

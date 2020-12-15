@@ -5,3 +5,7 @@ $lg-breakpoint: 992px;
 $xl-breakpoint: 1200px;
 // gutters
 $gutter: 15px;
+
+body, html {
+  height: 100%;
+}
