@@ -5,6 +5,10 @@
 ✔ documentation @done(20-12-15 15:37)
 ✔ webpack bundle analyzer @done(20-12-15 15:37)
 
+☐ pipes angular
+☐ pipes perso
+☐ pipe async
+
 ☐ tp :
   ✔ créer le module PageNotFoundModule (lazy loading) @done(20-12-15 11:50)
   ✔ créer pages/page-not-found-component (declaré sur PageNotFoundModule) @done(20-12-15 11:50)
