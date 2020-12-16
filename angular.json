@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "crm-scalian-dec"
+  "defaultProject": "crm-scalian-dec",
+  "cli": {
+    "analytics": false
+  }
 }
