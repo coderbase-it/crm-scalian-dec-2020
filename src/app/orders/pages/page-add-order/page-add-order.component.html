@@ -1,1 +1,8 @@
-<p>page-add-order works!</p>
+<app-template-container>
+  <h1 class="header">Add order</h1>
+  <ng-container class="body">
+
+    <app-form-order [init]="item" (submited)="add($event)"></app-form-order>
+
+  </ng-container>
+</app-template-container>

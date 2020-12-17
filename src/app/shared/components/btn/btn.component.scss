@@ -1,0 +1,11 @@
+a {
+  background: var(--app-primary);
+  padding: .5em 1em;
+  display: inline-block;
+  color: var(--app-light);
+  transition: all .2s;
+  &:hover {
+    text-decoration: none;
+    background: var(--app-primary-dark);
+  }
+}

@@ -7,7 +7,10 @@
 
 ✔ pipes angular @done(20-12-16 15:15)
 ✔ pipes perso @done(20-12-16 15:15)
-☐ pipe async
+✔ pipe async @done(20-12-17 09:49)
+✔ strategy onpush @done(20-12-17 09:49)
+✔ force change detection @done(20-12-17 09:49)
+☐ tableau dark
 
 ☐ tp :
   ✔ créer le module PageNotFoundModule (lazy loading) @done(20-12-15 11:50)
@@ -15,3 +18,21 @@
   ✔ créer le module PageNotFoundRoutingModule (1 route) @done(20-12-15 11:51)
   ✔ route pour charger PageNotFoundModule sur AppRoutingModule avec loadChildren @done(20-12-15 13:30)
   ✔ bug à corriger @done(20-12-15 13:30)
+
+  tp client :
+    ☐ enum ACTIVE INACTIVE
+    ☐ interface et model (db.json)
+    ☐ model (20 pour la tva, ACTIVE pour le state, 0 pour le totalCaHt)
+    ☐ clientsService (ex OrdersService)
+    ☐ pageListClients (ex pageListOrders) nom, total HT, tva, total TTC, state
+      ☐ utilisez template fullwidth
+      ☐ utilisez tableau light ou tableau dark
+      ☐ utilisez la meme directive que pour les orders (state-active, state-inactive)
+      ☐ utlisez le meme pipe total pour afficher le total ttc
+
+☐ @Output()
+☐ formulaire
+☐ validators
+☐ scss forms
+
+
