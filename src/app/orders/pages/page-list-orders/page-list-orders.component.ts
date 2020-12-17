@@ -1,5 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
 
@@ -9,11 +10,12 @@ import { OrdersService } from 'src/app/core/services/orders.service';
   styleUrls: ['./page-list-orders.component.scss']
 })
 export class PageListOrdersComponent implements OnInit, OnDestroy {
+  public states = Object.values(StateOrder);
   // public collection!: Order[];
   public collection$!: Observable<Order[]>;
   public headers!: string[];
   // private sub: Subscription;
-  constructor(private os: OrdersService) {
+  constructor(private os: OrdersService, private cd: ChangeDetectorRef) {
     this.collection$ = this.os.collection$;
     // this.sub = this.os.collection$.subscribe((datas) => {
     //   this.collection = datas;
@@ -30,6 +32,15 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+  }
+
+  public changeState(item: Order, event: any): void {
+    const state = event.target.value;
+    this.os.changeState(item, state).subscribe((res) => {
+      // traite les msg d'erreur de ton api
+      item.state = res.state;
+      this.cd.detectChanges();
+    });
   }
 
   ngOnDestroy(): void {

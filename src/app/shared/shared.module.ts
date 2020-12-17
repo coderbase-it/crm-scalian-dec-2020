@@ -6,11 +6,12 @@ import { TextsModule } from '../texts/texts.module';
 import { BtnComponent } from './components/btn/btn.component';
 import { TableauLightComponent } from './components/tableau-light/tableau-light.component';
 import { TotalPipe } from './pipes/total.pipe';
+import { StateDirective } from './directives/state.directive';
 
 
 
 @NgModule({
-  declarations: [TableauLightComponent, BtnComponent, TotalPipe],
+  declarations: [TableauLightComponent, BtnComponent, TotalPipe, StateDirective],
   imports: [
     CommonModule
   ],
@@ -20,7 +21,8 @@ import { TotalPipe } from './pipes/total.pipe';
     TemplatesModule,
     IconsModule,
     TextsModule,
-    TotalPipe
+    TotalPipe,
+    StateDirective
   ]
 })
 export class SharedModule { }
