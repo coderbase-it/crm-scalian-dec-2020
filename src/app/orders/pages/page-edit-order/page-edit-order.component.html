@@ -1,5 +1,7 @@
 <app-template-container>
-  <h1 class="header">Add order</h1>
+  <app-text-bandeau class="header">
+    <h1>Edit Order</h1>
+  </app-text-bandeau>
   <ng-container class="body">
 
     <app-form-order *ngIf="item$ | async as item" [init]="item" (submited)="edit($event)"></app-form-order>

@@ -1,27 +1,49 @@
-<app-template-fullwidth>
-  <h1 class="header">Orders</h1>
-  <ng-container class="body">
-    <app-tableau-light [headers]="headers" *ngIf="collection$ | async as collection">
-      <tr *ngFor="let item of collection">
-        <td><app-icon-edit (click)="goToEdit(item)"></app-icon-edit></td>
-        <td>{{ item.typePresta }}</td>
-        <td>{{ item.client }}</td>
-        <td>{{ item.nbJours }}</td>
-        <td>{{ item.tjmHt | currency }}</td>
-        <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
-        <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
-        <td [appState]="item.state">
-          <select (change)="changeState(item, $event)">
-            <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
-            <!-- <option value="CANCELED" selected="true">CANCELED</option>
-            <option value="OPTION" selected="false">OPTION</option>
-            <option value="CONFIRMED" selected="false">CONFIRMED</option> -->
-          </select>
-        </td>
-      </tr>
-    </app-tableau-light>
+<ng-container *ngIf="collection$ | async as collection">
+  <app-template-fullwidth>
+    <app-text-bandeau class="header">
+      <h1>{{ title }}</h1>
+    </app-text-bandeau>
+    <ng-container class="body">
+      <app-tableau-light [headers]="headers">
+        <tr *ngFor="let item of collection">
+          <td>
+            <app-icon-edit (click)="goToEdit(item)"></app-icon-edit>
+            <app-icon-delete (click)="delete(item)"></app-icon-delete>
+            <app-icon-edit (click)="details(item)"></app-icon-edit>
+          </td>
+          <td>{{ item.typePresta }}</td>
+          <td>{{ item.client }}</td>
+          <td>{{ item.nbJours }}</td>
+          <td>{{ item.tjmHt | currency }}</td>
+          <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
+          <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
+          <td [appState]="item.state">
+            <select (change)="changeState(item, $event)">
+              <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </app-tableau-light>
 
-    <app-btn route="add" label="Add an order"></app-btn>
+      <app-btn route="add" label="Add an order"></app-btn>
 
-  </ng-container>
-</app-template-fullwidth>
+    </ng-container>
+  </app-template-fullwidth>
+  <app-template-container>
+    <app-text-page class="body">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="details">Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="comment">Comment</a>
+        </li>
+      </ul>
+
+      <router-outlet></router-outlet>
+      <!-- router ajoutera les host elements app-order-details ou app-order-comment -->
+
+    </app-text-page>
+  </app-template-container>
+</ng-container>

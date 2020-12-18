@@ -52,6 +52,11 @@ tp edit :
     ☐ dans le ts de PageEditOrderComponent créé la fonction edit(item: Order) (this.os.update(item))
     ☐ faire le subscribe() et dans le subscribe on ridige vers la route orders
 
+ tp delete :
+  ☐ page list order html : ajouter icon delete (click)="delete(item)"
+  ☐ dans le ts on créé la fn delete(item) qui fait this.os.delete(item).subscribe()
+  ☐ dans le subscribe on refait un appel http pour maj collection$ coté front (this.collection$ = this.os.collection$)
+  ☐ créer la méthode delete(item) sur votre service orders
 
 
 

@@ -1,0 +1,8 @@
+.text-bandeau {
+  h1, h2, h3, h4, h5, h6, p, li, a, span {
+    color: var(--app-light);
+  }
+  h1 {
+    font-size: var(--app-h1-fs);
+  }
+}

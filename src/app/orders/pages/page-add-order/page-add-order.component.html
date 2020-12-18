@@ -1,5 +1,7 @@
 <app-template-container>
-  <h1 class="header">Add order</h1>
+  <app-text-bandeau class="header">
+    <h1>Add Order</h1>
+  </app-text-bandeau>
   <ng-container class="body">
 
     <app-form-order [init]="item" (submited)="add($event)"></app-form-order>
