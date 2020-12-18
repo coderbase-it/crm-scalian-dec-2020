@@ -30,9 +30,30 @@
       ☐ utilisez la meme directive que pour les orders (state-active, state-inactive)
       ☐ utlisez le meme pipe total pour afficher le total ttc
 
-☐ @Output()
-☐ formulaire
-☐ validators
-☐ scss forms
+✔ @Output() @done(20-12-18 08:07)
+✔ formulaire @done(20-12-18 08:07)
+✔ validators @done(20-12-18 08:07)
+✔ scss forms @done(20-12-18 08:07)
+
+tp edit :
+  ☐ ajouter Action dans list orders ts (headers[])
+  ☐ ajouter un td dans le html avec une instance de icon-delete
+  ☐ ajouter un event click sur l'icon et on le bind avec une fonction goToEdit(item)
+  ☐ créer goToEdit(item: Order) dans le ts pour faire une redirection vers orders/edit/un_id
+  ☐ sur orders-routing, ajouter une route pour edit/un_id (id étant un paramètre)
+
+  ☐ PageEditOrderComponent
+    ☐ dans ts, récupérer l'id dans la route
+    ☐ appel http (via le service OrdersService ID)
+    ☐ sur OrdersService créer la méthode getItemById(id)
+    ☐ faire le subscribe dans pageeditcomponent ts pour récupérer la réponse de l'api
+    ☐ enregistrer la réponse de l'api dans une variable public item
+    ☐ Dans le html : on utilise app-template-container, on projette un title, on projette un body qui contient une instance de app-form-order (avec binding init-item) et l'@Output() qui appelera edit($event)
+    ☐ dans le ts de PageEditOrderComponent créé la fonction edit(item: Order) (this.os.update(item))
+    ☐ faire le subscribe() et dans le subscribe on ridige vers la route orders
+
+
+
+
 
 

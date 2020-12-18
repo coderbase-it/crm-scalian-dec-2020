@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
@@ -15,12 +16,17 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
   public collection$!: Observable<Order[]>;
   public headers!: string[];
   // private sub: Subscription;
-  constructor(private os: OrdersService, private cd: ChangeDetectorRef) {
+  constructor(
+    private os: OrdersService,
+    private cd: ChangeDetectorRef,
+    private router: Router
+  ) {
     this.collection$ = this.os.collection$;
     // this.sub = this.os.collection$.subscribe((datas) => {
     //   this.collection = datas;
     // });
     this.headers = [
+      'Action',
       'Type',
       'Client',
       'Nb Jours',
@@ -41,6 +47,10 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
       item.state = res.state;
       this.cd.detectChanges();
     });
+  }
+
+  public goToEdit(item: Order): void {
+    this.router.navigate(['orders', 'edit', item.id]);
   }
 
   ngOnDestroy(): void {
