@@ -12,6 +12,10 @@
     "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm-scalian-dec/stats.json",
     "jsonServer": "json-server --watch mock_db/db.json"
   },
+  "engines": {
+    "node": ">=10.9.0 <=14.16.0",
+    "yarn": ">=1.22.4 <2"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.3",
