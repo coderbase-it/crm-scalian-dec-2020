@@ -82,6 +82,10 @@ const routes: Routes &#x3D; [
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;./orders/orders.module&#x27;).then(m &#x3D;&gt; m.OrdersModule)&quot;
   },
   {
+    path: &#x27;stats&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./stats/stats.module&#x27;).then(m &#x3D;&gt; m.StatsModule)&quot;
+  },
+  {
     path: &#x27;clients&#x27;,
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;./clients/clients.module&#x27;).then(m &#x3D;&gt; m.ClientsModule)&quot;
   },
@@ -94,9 +98,9 @@ const routes: Routes &#x3D; [
 @NgModule({
   imports: [RouterModule.forRoot(
     routes,
-    {
-      preloadingStrategy: PreloadAllModules
-    }
+    // {
+    //   preloadingStrategy: PreloadAllModules
+    // }
   )],
   exports: [RouterModule]
 })

@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [
-    LoginModule,
+   // LoginModule,
     UiModule,
     IconsModule,
     TextsModule,

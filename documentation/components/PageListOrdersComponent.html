@@ -71,6 +71,7 @@
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
     </p>
 
 
@@ -121,6 +122,33 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#collection$">collection$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#headers">headers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#states">states</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -130,6 +158,25 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changeState">changeState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#details">details</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#goToEdit">goToEdit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
@@ -151,15 +198,81 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(os: <a href="../injectables/OrdersService.html">OrdersService</a>, cd: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:18</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>os</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrdersService.html" target="_self" >OrdersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cd</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -173,6 +286,345 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeState"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            changeState
+                        </b>
+                        <a href="#changeState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changeState(item: <a href="../classes/Order.html">Order</a>, event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(item: <a href="../classes/Order.html">Order</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="details"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            details
+                        </b>
+                        <a href="#details"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>details(item: <a href="../classes/Order.html">Order</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToEdit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            goToEdit
+                        </b>
+                        <a href="#goToEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>goToEdit(item: <a href="../classes/Order.html">Order</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -195,8 +647,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:41</a></div>
                 </td>
             </tr>
 
@@ -213,31 +665,248 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="collection$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            collection$</b>
+                            <a href="#collection$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Order.html" target="_self" >Subject&lt;Order[]&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headers"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            headers</b>
+                            <a href="#headers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="states"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            states</b>
+                            <a href="#states"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Object.values(StateOrder)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            title</b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/orders/pages/page-list-orders/page-list-orders.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectorRef, Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { BehaviorSubject, Observable, Subject, Subscription } from &#x27;rxjs&#x27;;
+import { StateOrder } from &#x27;src/app/core/enums/state-order.enum&#x27;;
+import { Order } from &#x27;src/app/core/models/order&#x27;;
+import { OrdersService } from &#x27;src/app/core/services/orders.service&#x27;;
 
 @Component({
   selector: &#x27;app-page-list-orders&#x27;,
   templateUrl: &#x27;./page-list-orders.component.html&#x27;,
   styleUrls: [&#x27;./page-list-orders.component.scss&#x27;]
 })
-export class PageListOrdersComponent implements OnInit {
-
-  constructor() { }
+export class PageListOrdersComponent implements OnInit, OnDestroy {
+  public states &#x3D; Object.values(StateOrder);
+  // public collection!: Order[];
+  public collection$!: Subject&lt;Order[]&gt;;
+  public headers!: string[];
+  public title!: string;
+  // private sub: Subscription;
+  constructor(
+    private os: OrdersService,
+    private cd: ChangeDetectorRef,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.route.data.subscribe(data &#x3D;&gt; this.title &#x3D; data.title);
+    this.collection$ &#x3D; this.os.collection$;
+    this.os.refreshSubject();
+    this.headers &#x3D; [
+      &#x27;Action&#x27;,
+      &#x27;Type&#x27;,
+      &#x27;Client&#x27;,
+      &#x27;Nb Jours&#x27;,
+      &#x27;Tjm Ht&#x27;,
+      &#x27;Total HT&#x27;,
+      &#x27;Total TTC&#x27;,
+      &#x27;State&#x27;
+    ];
+  }
 
   ngOnInit(): void {
   }
 
+  public changeState(item: Order, event: any): void {
+    const state &#x3D; event.target.value;
+    this.os.changeState(item, state).subscribe((res) &#x3D;&gt; {
+      // traite les msg d&#x27;erreur de ton api
+      item.state &#x3D; res.state;
+      this.cd.detectChanges();
+    });
+  }
+
+  public goToEdit(item: Order): void {
+    this.router.navigate([&#x27;orders&#x27;, &#x27;edit&#x27;, item.id]);
+  }
+  public delete(item: Order): void {
+    this.os.delete(item).subscribe(res &#x3D;&gt; this.os.refreshSubject());
+  }
+
+  public details(item: Order): void {
+    this.os.item$.next(item);
+  }
+
+  ngOnDestroy(): void {
+    // this.sub.unsubscribe();
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;page-list-orders works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;collection$ | async as collection&quot;&gt;
+  &lt;app-template-fullwidth&gt;
+    &lt;app-text-bandeau class&#x3D;&quot;header&quot;&gt;
+      &lt;h1&gt;{{ title }}&lt;/h1&gt;
+    &lt;/app-text-bandeau&gt;
+    &lt;ng-container class&#x3D;&quot;body&quot;&gt;
+      &lt;app-tableau-light [headers]&#x3D;&quot;headers&quot;&gt;
+        &lt;tr *ngFor&#x3D;&quot;let item of collection&quot;&gt;
+          &lt;td&gt;
+            &lt;app-icon-edit (click)&#x3D;&quot;goToEdit(item)&quot;&gt;&lt;/app-icon-edit&gt;
+            &lt;app-icon-delete (click)&#x3D;&quot;delete(item)&quot;&gt;&lt;/app-icon-delete&gt;
+            &lt;app-icon-edit (click)&#x3D;&quot;details(item)&quot;&gt;&lt;/app-icon-edit&gt;
+          &lt;/td&gt;
+          &lt;td&gt;{{ item.typePresta }}&lt;/td&gt;
+          &lt;td&gt;{{ item.client }}&lt;/td&gt;
+          &lt;td&gt;{{ item.nbJours }}&lt;/td&gt;
+          &lt;td&gt;{{ item.tjmHt | currency }}&lt;/td&gt;
+          &lt;td&gt;{{ item.tjmHt | total: item.nbJours | currency }}&lt;/td&gt;
+          &lt;td&gt;{{ item.tjmHt | total: item.nbJours: item.tva | currency }}&lt;/td&gt;
+          &lt;td [appState]&#x3D;&quot;item.state&quot;&gt;
+            &lt;select (change)&#x3D;&quot;changeState(item, $event)&quot;&gt;
+              &lt;option *ngFor&#x3D;&quot;let state of states&quot; [value]&#x3D;&quot;state&quot; [selected]&#x3D;&quot;state &#x3D;&#x3D;&#x3D; item.state&quot;&gt;{{ state }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/app-tableau-light&gt;
+
+      &lt;app-btn route&#x3D;&quot;add&quot; label&#x3D;&quot;Add an order&quot;&gt;&lt;/app-btn&gt;
+
+    &lt;/ng-container&gt;
+  &lt;/app-template-fullwidth&gt;
+  &lt;app-template-container&gt;
+    &lt;app-text-page class&#x3D;&quot;body&quot;&gt;
+      &lt;ul class&#x3D;&quot;nav justify-content-center&quot;&gt;
+        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link&quot; routerLink&#x3D;&quot;details&quot;&gt;Details&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link&quot; routerLink&#x3D;&quot;comment&quot;&gt;Comment&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;router-outlet&gt;&lt;/router-outlet&gt;
+      &lt;!-- router ajoutera les host elements app-order-details ou app-order-comment --&gt;
+
+    &lt;/app-text-page&gt;
+  &lt;/app-template-container&gt;
+&lt;/ng-container&gt;
 </code></pre>
     </div>
 
@@ -245,7 +914,8 @@ export class PageListOrdersComponent implements OnInit {
                 <p class="comment">
                     <code>./page-list-orders.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -273,9 +943,9 @@ export class PageListOrdersComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>page-list-orders works!</p></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="collection$ | async as collection">  <app-template-fullwidth>    <app-text-bandeau class="header">      <h1>{{ title }}</h1>    </app-text-bandeau>    <ng-container class="body">      <app-tableau-light [headers]="headers">        <tr *ngFor="let item of collection">          <td>            <app-icon-edit (click)="goToEdit(item)"></app-icon-edit>            <app-icon-delete (click)="delete(item)"></app-icon-delete>            <app-icon-edit (click)="details(item)"></app-icon-edit>          </td>          <td>{{ item.typePresta }}</td>          <td>{{ item.client }}</td>          <td>{{ item.nbJours }}</td>          <td>{{ item.tjmHt | currency }}</td>          <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>          <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>          <td [appState]="item.state">            <select (change)="changeState(item, $event)">              <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}              </option>            </select>          </td>        </tr>      </app-tableau-light>      <app-btn route="add" label="Add an order"></app-btn>    </ng-container>  </app-template-fullwidth>  <app-template-container>    <app-text-page class="body">      <ul class="nav justify-content-center">        <li class="nav-item">          <a class="nav-link" routerLink="details">Details</a>        </li>        <li class="nav-item">          <a class="nav-link" routerLink="comment">Comment</a>        </li>      </ul>      <router-outlet></router-outlet>      <!-- router ajoutera les host elements app-order-details ou app-order-comment -->    </app-text-page>  </app-template-container></ng-container></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormOrderComponent', 'selector': 'app-form-order'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'OrderCommentComponent', 'selector': 'app-order-comment'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'PageStatsComponent', 'selector': 'app-page-stats'},{'name': 'TableauDarkComponent', 'selector': 'app-tableau-dark'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'TemplateContainerComponent', 'selector': 'app-template-container'},{'name': 'TemplateFullwidthComponent', 'selector': 'app-template-fullwidth'},{'name': 'TextBandeauComponent', 'selector': 'app-text-bandeau'},{'name': 'TextDialogErrorComponent', 'selector': 'app-text-dialog-error'},{'name': 'TextDialogInfoComponent', 'selector': 'app-text-dialog-info'},{'name': 'TextDialogSuccessComponent', 'selector': 'app-text-dialog-success'},{'name': 'TextDialogWarningComponent', 'selector': 'app-text-dialog-warning'},{'name': 'TextPageComponent', 'selector': 'app-text-page'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
+    var DIRECTIVES = [{'name': 'StateDirective', 'selector': '[appState]'}];
     var ACTUAL_COMPONENT = {'name': 'PageListOrdersComponent'};
 </script>
 <script src="../js/tree.js"></script>
