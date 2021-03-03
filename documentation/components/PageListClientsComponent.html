@@ -237,7 +237,13 @@ export class PageListClientsComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;page-list-clients works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-template-fullwidth&gt;
+  &lt;h1 class&#x3D;&quot;header&quot;&gt;Clients&lt;/h1&gt;
+  &lt;ng-container class&#x3D;&quot;body&quot;&gt;
+    &lt;app-tableau-light&gt;&lt;/app-tableau-light&gt;
+    &lt;app-icon-edit&gt;&lt;/app-icon-edit&gt;
+  &lt;/ng-container&gt;
+&lt;/app-template-fullwidth&gt;
 </code></pre>
     </div>
 
@@ -273,9 +279,9 @@ export class PageListClientsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>page-list-clients works!</p></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><app-template-fullwidth>  <h1 class="header">Clients</h1>  <ng-container class="body">    <app-tableau-light></app-tableau-light>    <app-icon-edit></app-icon-edit>  </ng-container></app-template-fullwidth></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormOrderComponent', 'selector': 'app-form-order'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'OrderCommentComponent', 'selector': 'app-order-comment'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'PageStatsComponent', 'selector': 'app-page-stats'},{'name': 'TableauDarkComponent', 'selector': 'app-tableau-dark'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'TemplateContainerComponent', 'selector': 'app-template-container'},{'name': 'TemplateFullwidthComponent', 'selector': 'app-template-fullwidth'},{'name': 'TextBandeauComponent', 'selector': 'app-text-bandeau'},{'name': 'TextDialogErrorComponent', 'selector': 'app-text-dialog-error'},{'name': 'TextDialogInfoComponent', 'selector': 'app-text-dialog-info'},{'name': 'TextDialogSuccessComponent', 'selector': 'app-text-dialog-success'},{'name': 'TextDialogWarningComponent', 'selector': 'app-text-dialog-warning'},{'name': 'TextPageComponent', 'selector': 'app-text-page'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
+    var DIRECTIVES = [{'name': 'StateDirective', 'selector': '[appState]'}];
     var ACTUAL_COMPONENT = {'name': 'PageListClientsComponent'};
 </script>
 <script src="../js/tree.js"></script>

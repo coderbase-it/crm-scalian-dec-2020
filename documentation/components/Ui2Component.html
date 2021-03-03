@@ -262,8 +262,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/ui/ui2/ui2.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/ui/ui2/ui2.component.ts:25</a></div>
                 </td>
             </tr>
 
@@ -352,6 +352,7 @@ export class Ui2Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.documentElement.style.setProperty(&#x27;--app-light&#x27;, &#x27;red&#x27;)
   }
   /**
    * this method is called to reverse property open
@@ -511,8 +512,8 @@ footer {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><header class="fixed-top">  <span (click)=\'toggle()\' *ngIf="!open">    <ng-content select=".icon-nav"></ng-content>  </span>  <span (click)="toggle()"  *ngIf="open">    <ng-content select=".icon-close"></ng-content>  </span>  <ng-content select=".header"></ng-content></header><main [ngClass]="{\'close-aside\': !open}">  <div class="shadow position-fixed" (click)="open = false">  </div>  <aside>    <div class="scroller">      <ng-content select=".nav"></ng-content>    </div>  </aside>  <div class="page">    <div class="contents">      <ng-content select=".content"></ng-content>    </div>    <footer>      <ng-content select=".footer"></ng-content>    </footer>  </div></main></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
-    var DIRECTIVES = [];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormOrderComponent', 'selector': 'app-form-order'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconCloseComponent', 'selector': 'app-icon-close'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'IconNavComponent', 'selector': 'app-icon-nav'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'OrderCommentComponent', 'selector': 'app-order-comment'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddOrderComponent', 'selector': 'app-page-add-order'},{'name': 'PageEditClientComponent', 'selector': 'app-page-edit-client'},{'name': 'PageEditOrderComponent', 'selector': 'app-page-edit-order'},{'name': 'PageListClientsComponent', 'selector': 'app-page-list-clients'},{'name': 'PageListOrdersComponent', 'selector': 'app-page-list-orders'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PageSigninComponent', 'selector': 'app-page-signin'},{'name': 'PageStatsComponent', 'selector': 'app-page-stats'},{'name': 'TableauDarkComponent', 'selector': 'app-tableau-dark'},{'name': 'TableauLightComponent', 'selector': 'app-tableau-light'},{'name': 'TemplateContainerComponent', 'selector': 'app-template-container'},{'name': 'TemplateFullwidthComponent', 'selector': 'app-template-fullwidth'},{'name': 'TextBandeauComponent', 'selector': 'app-text-bandeau'},{'name': 'TextDialogErrorComponent', 'selector': 'app-text-dialog-error'},{'name': 'TextDialogInfoComponent', 'selector': 'app-text-dialog-info'},{'name': 'TextDialogSuccessComponent', 'selector': 'app-text-dialog-success'},{'name': 'TextDialogWarningComponent', 'selector': 'app-text-dialog-warning'},{'name': 'TextPageComponent', 'selector': 'app-text-page'},{'name': 'Ui2Component', 'selector': 'app-ui2'},{'name': 'UiComponent', 'selector': 'app-ui'}];
+    var DIRECTIVES = [{'name': 'StateDirective', 'selector': '[appState]'}];
     var ACTUAL_COMPONENT = {'name': 'Ui2Component'};
 </script>
 <script src="../js/tree.js"></script>

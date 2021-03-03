@@ -34,14 +34,54 @@
 ✔ ui component @done(20-12-15 10:00)
 ✔ lazy loading et routing @done(20-12-15 10:00)
 ✔ end ui with directives @done(20-12-15 14:38)
-☐ documentation
-☐ webpack bundle analyzer</p>
+✔ documentation @done(20-12-15 15:37)
+✔ webpack bundle analyzer @done(20-12-15 15:37)</p>
+<p>✔ pipes angular @done(20-12-16 15:15)
+✔ pipes perso @done(20-12-16 15:15)
+✔ pipe async @done(20-12-17 09:49)
+✔ strategy onpush @done(20-12-17 09:49)
+✔ force change detection @done(20-12-17 09:49)
+☐ tableau dark</p>
 <p>☐ tp :
   ✔ créer le module PageNotFoundModule (lazy loading) @done(20-12-15 11:50)
   ✔ créer pages/page-not-found-component (declaré sur PageNotFoundModule) @done(20-12-15 11:50)
   ✔ créer le module PageNotFoundRoutingModule (1 route) @done(20-12-15 11:51)
   ✔ route pour charger PageNotFoundModule sur AppRoutingModule avec loadChildren @done(20-12-15 13:30)
   ✔ bug à corriger @done(20-12-15 13:30)</p>
+<p>  tp client :
+    ☐ enum ACTIVE INACTIVE
+    ☐ interface et model (db.json)
+    ☐ model (20 pour la tva, ACTIVE pour le state, 0 pour le totalCaHt)
+    ☐ clientsService (ex OrdersService)
+    ☐ pageListClients (ex pageListOrders) nom, total HT, tva, total TTC, state
+      ☐ utilisez template fullwidth
+      ☐ utilisez tableau light ou tableau dark
+      ☐ utilisez la meme directive que pour les orders (state-active, state-inactive)
+      ☐ utlisez le meme pipe total pour afficher le total ttc</p>
+<p>✔ @Output() @done(20-12-18 08:07)
+✔ formulaire @done(20-12-18 08:07)
+✔ validators @done(20-12-18 08:07)
+✔ scss forms @done(20-12-18 08:07)</p>
+<p>tp edit :
+  ☐ ajouter Action dans list orders ts (headers[])
+  ☐ ajouter un td dans le html avec une instance de icon-delete
+  ☐ ajouter un event click sur l&#39;icon et on le bind avec une fonction goToEdit(item)
+  ☐ créer goToEdit(item: Order) dans le ts pour faire une redirection vers orders/edit/un_id
+  ☐ sur orders-routing, ajouter une route pour edit/un_id (id étant un paramètre)</p>
+<p>  ☐ PageEditOrderComponent
+    ☐ dans ts, récupérer l&#39;id dans la route
+    ☐ appel http (via le service OrdersService ID)
+    ☐ sur OrdersService créer la méthode getItemById(id)
+    ☐ faire le subscribe dans pageeditcomponent ts pour récupérer la réponse de l&#39;api
+    ☐ enregistrer la réponse de l&#39;api dans une variable public item
+    ☐ Dans le html : on utilise app-template-container, on projette un title, on projette un body qui contient une instance de app-form-order (avec binding init-item) et l&#39;@Output() qui appelera edit($event)
+    ☐ dans le ts de PageEditOrderComponent créé la fonction edit(item: Order) (this.os.update(item))
+    ☐ faire le subscribe() et dans le subscribe on ridige vers la route orders</p>
+<p> tp delete :
+  ☐ page list order html : ajouter icon delete (click)=&quot;delete(item)&quot;
+  ☐ dans le ts on créé la fn delete(item) qui fait this.os.delete(item).subscribe()
+  ☐ dans le subscribe on refait un appel http pour maj collection$ coté front (this.collection$ = this.os.collection$)
+  ☐ créer la méthode delete(item) sur votre service orders</p>
 
 
 

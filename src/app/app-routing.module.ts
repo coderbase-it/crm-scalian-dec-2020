@@ -10,6 +10,10 @@ const routes: Routes = [
     loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)
   },
   {
+    path: 'stats',
+    loadChildren: () => import('./stats/stats.module').then(m => m.StatsModule)
+  },
+  {
     path: 'clients',
     loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule)
   },
@@ -22,9 +26,9 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(
     routes,
-    {
-      preloadingStrategy: PreloadAllModules
-    }
+    // {
+    //   preloadingStrategy: PreloadAllModules
+    // }
   )],
   exports: [RouterModule]
 })

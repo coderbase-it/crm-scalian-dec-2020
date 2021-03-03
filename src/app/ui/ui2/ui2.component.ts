@@ -15,6 +15,7 @@ export class Ui2Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.documentElement.style.setProperty('--app-light', 'red')
   }
   /**
    * this method is called to reverse property open
