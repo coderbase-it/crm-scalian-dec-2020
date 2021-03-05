@@ -1,1 +1,1 @@
-<a [routerLink]="route">{{ label }}</a>
+<a *ngIf="label" [routerLink]="route">{{ label }}</a>

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BtnComponent should done snapshot 1`] = `
+<app-btn
+  label={[Function String]}
+>
+  <a
+    href="/"
+  >
+    label
+  </a>
+</app-btn>
+`;

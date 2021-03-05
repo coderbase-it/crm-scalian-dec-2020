@@ -61,6 +61,11 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
     this.os.item$.next(item);
   }
 
+  onClick(){
+    console.log("onClick");
+
+  }
+
   ngOnDestroy(): void {
     // this.sub.unsubscribe();
   }
