@@ -17,7 +17,7 @@
           <td>{{ item.tjmHt | currency }}</td>
           <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
           <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
-          <td [appState]="item.state">
+          <td appState [state]="item.state">
             <select (change)="changeState(item, $event)">
               <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}
               </option>
@@ -47,3 +47,5 @@
     </app-text-page>
   </app-template-container>
 </ng-container>
+
+<button class="btn-click" (click)="onClick()">Appuyer</button>
